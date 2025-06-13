@@ -16,7 +16,14 @@ body{
 
 .display{
     margin: 40px;
+    justify-content: flex-end;
     background-color: darkgreen;
+}
+
+.content{
+    display: flex;
+    justify-content: flex-end;
+    margin:20px;
 }
 
 .input{
