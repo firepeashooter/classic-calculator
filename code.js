@@ -21,13 +21,28 @@ function divide(num1, num2){
     return (num1 / num2).toFixed(2);
 }
 
+function operate(num1, num2, operator){
+    
+    switch(operator){
+        case "+":
+            add(num1, num2);
+            break;
+
+        case "-":
+            subtract(num1, num2);
+            break;
+
+        case "*":
+            multiply(num1, num2);
+            break;
+
+        case "/":
+            divide(num1, num2);
+            break;
+    }
+}
 
 
-num1 = 3
-num2 = 5
-
-
-console.log(add(num1, num2));
-console.log(subtract(num1, num2));
-console.log(multiply(num1, num2));
-console.log(divide(num1, num2));
+let num1;
+let operator;
+let num2;
