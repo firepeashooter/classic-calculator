@@ -76,10 +76,43 @@ body{
     height: 80px;
 }
 
-.number, .operator{
+
+.number{
+    margin: 10px;
+    width: 80px;
+
+    font-size: 50px;
+    height: 80px;
+
+
+    border: none;
+    outline: none;
+    box-shadow: 0 4px 0 #2a2a5a; /* Slight dark shadow for 3D effect */
+    border-radius: 6px;
+}
+
+
+.operator{
     margin: 10px;
     width: 80px;
     height: 80px;
+
+    color: whitesmoke;
+    background-color: darkslateblue;
+    font-size: 50px;
+
+    border: none;
+    outline: none;
+    box-shadow: 0 4px 0 #2a2a5a; /* Slight dark shadow for 3D effect */
+    border-radius: 6px;
+}
+
+.operator:hover{
+    background-color: slateblue;
+}
+
+.operator:active{
+    background-color: indigo;
 }
 
 #clear{
