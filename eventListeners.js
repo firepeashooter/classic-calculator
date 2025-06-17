@@ -1,4 +1,13 @@
 let buttons = document.querySelector(".row");
+let display = document.querySelector(".content");
+
+let clear = document.querySelector("#clear");
+
+clear.addEventListener("click", () => {
+    //Clear the display
+    display.textContent = "";
+
+})
 
 buttons.addEventListener("click", (e) => {
 
@@ -7,7 +16,8 @@ buttons.addEventListener("click", (e) => {
     switch(target.id){
 
         case "one":
-            console.log("one");
+            //Append 1 to the screen
+            display.textContent += "1";
             break;
 
         case "two":
