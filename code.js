@@ -39,6 +39,8 @@ function operate(num1, num2, operator){
 }
 
 
+
+
 let num1;
 let operator;
 let num2;
