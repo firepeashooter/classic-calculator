@@ -66,7 +66,15 @@ buttons.addEventListener("click", (e) => {
             break;
 
         case "plus":
-            console.log("plus");
+            
+            //Clear the screen, save the number and the operator
+            operator = "+";
+            
+            num1 = parseInt(display.textContent);
+
+            display.textContent = "";
+
+            console.log(num1 + 2);
             //Save the number in the current display to num1
 
             //If num1 is full save to num2
@@ -75,6 +83,12 @@ buttons.addEventListener("click", (e) => {
 
 
             break;
+
+        case "equals":
+
+            num2 = parseInt(display.textContent);
+
+            display.textContent = operate(num1, num2, operator);
 
 
 
