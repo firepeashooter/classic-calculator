@@ -8,6 +8,11 @@ clear.addEventListener("click", () => {
     //Clear the display
     display.textContent = "";
 
+    //clear the variables
+    operator = undefined;
+    num1 = undefined;
+    num2 = undefined;
+
 })
 
 buttons.addEventListener("click", (e) => {
@@ -17,78 +22,116 @@ buttons.addEventListener("click", (e) => {
     switch(target.id){
 
         case "one":
-            //Append 1 to the screen
-            display.textContent += "1";
+            if (num1){
+                display.textContent = "1";
+            }else{
+                display.textContent += "1";
+            }
             break;
 
         case "two":
-            display.textContent += "2";
-
+            if (num1){
+                display.textContent = "2";
+            }else{
+                display.textContent += "2";
+            }
             break;
-
         case "three":
-            display.textContent += "3";
-
+            if (num1){
+                display.textContent = "3";
+            }else{
+                display.textContent += "3";
+            }
             break;
-        case "four":
-            display.textContent += "4";
 
+        case "four":
+            if (num1){
+                display.textContent = "4";
+            }else{
+                display.textContent += "4";
+            }
             break;
 
         case "five":
-            display.textContent += "5";
-
+            if (num1){
+                display.textContent = "5";
+            }else{
+                display.textContent += "5";
+            }
             break;
 
         case "six":
-            display.textContent += "6";
-
+            if (num1){
+                display.textContent = "6";
+            }else{
+                display.textContent += "6";
+            }
             break;
 
         case "seven":
-            display.textContent += "7";
-
+            if (num1){
+                display.textContent = "7";
+            }else{
+                display.textContent += "7";
+            }
             break;
 
         case "eight":
-            display.textContent += "8";
-
+            if (num1){
+                display.textContent = "8";
+            }else{
+                display.textContent += "8";
+            }
             break;
 
         case "nine":
-            display.textContent += "9";
-
+            if (num1){
+                display.textContent = "9";
+            }else{
+                display.textContent += "9";
+            }
             break;
 
         case "zero":
-            display.textContent += "0";
-
+            if (num1){
+                display.textContent = "0";
+            }else{
+                display.textContent += "0";
+            }
             break;
 
         case "plus":
-            
             //Clear the screen, save the number and the operator
-            operator = "+";
             
-            num1 = parseInt(display.textContent);
+            operator = "+";
 
-            display.textContent = "";
+            if (num1){ //If we have num1, num2 is the most recent number and we can operate
+                num2 = parseInt(display.textContent);
+                display.textContent = "";
+                display.textContent = operate(num1, num2, operator);
 
-            console.log(num1 + 2);
-            //Save the number in the current display to num1
+                //reset numbers???
+                num1 = parseInt(display.textContent);
+                num2 = undefined;
+            } else{
+                num1 = parseInt(display.textContent);
+                display.textContent = "";
+            }
 
-            //If num1 is full save to num2
-
-            //If both numbers are full call operate
-
+            
 
             break;
 
         case "equals":
-
             num2 = parseInt(display.textContent);
 
-            display.textContent = operate(num1, num2, operator);
+            if (num1 && num2){
+                display.textContent = operate(num1, num2, operator);
+                num1 = undefined;
+                num2 = undefined;
+
+            }
+
 
 
 
