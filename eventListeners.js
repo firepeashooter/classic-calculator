@@ -28,7 +28,7 @@ buttons.addEventListener("click", (e) => {
                 display.textContent = "";
                 answerDisplayed = false;
             }
-            
+
             display.textContent += "1";
 
             break;
@@ -57,24 +57,79 @@ buttons.addEventListener("click", (e) => {
             break;
 
         case "four":
+            if (answerDisplayed){
+                display.textContent = "";
+                answerDisplayed = false;
+            }
+                      
+            display.textContent += "4";
+
+            break;
            
 
         case "five":
+            if (answerDisplayed){
+                display.textContent = "";
+                answerDisplayed = false;
+            }
+                      
+            display.textContent += "5";
+
+            break;
             
 
         case "six":
+            if (answerDisplayed){
+                display.textContent = "";
+                answerDisplayed = false;
+            }
+                      
+            display.textContent += "6";
+            break;
             
 
         case "seven":
+            if (answerDisplayed){
+                display.textContent = "";
+                answerDisplayed = false;
+            }
+                      
+            display.textContent += "7";
+
+            break;
             
 
         case "eight":
+            if (answerDisplayed){
+                display.textContent = "";
+                answerDisplayed = false;
+            }
+                      
+            display.textContent += "8";
+
+            break;
             
 
         case "nine":
+            if (answerDisplayed){
+                display.textContent = "";
+                answerDisplayed = false;
+            }
+                      
+            display.textContent += "9";
+
+            break;
             
 
         case "zero":
+            if (answerDisplayed){
+                display.textContent = "";
+                answerDisplayed = false;
+            }
+                      
+            display.textContent += "0";
+
+            break;
             
 
         case "plus":
