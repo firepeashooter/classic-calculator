@@ -14,7 +14,12 @@ function multiply(num1, num2){
 
 
 function divide(num1, num2){
-    return (num1 / num2).toFixed(2);
+    if (num2 != 0){
+        return (num1 / num2).toFixed(2);
+    }else{
+        console.log("num2 is 0");
+        return "Cannot Divide by 0";
+    }
 }
 
 function operate(num1, num2, operator){

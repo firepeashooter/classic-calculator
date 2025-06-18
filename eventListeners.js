@@ -137,16 +137,16 @@ buttons.addEventListener("click", (e) => {
             
             if (num1){ //If we have num1, num2 is the most recent number and we can operate
                 num2 = parseFloat(display.textContent);
-                if (num2){
-                    display.textContent = "";
-                    display.textContent = operate(num1, num2, operator);
-                    answerDisplayed = true;
-                    
-                    //reset numbers and set operator
-                    operator = "+";
-                    num1 = parseFloat(display.textContent);
-                    num2 = undefined;
-                }
+                
+                display.textContent = "";
+                display.textContent = operate(num1, num2, operator);
+                answerDisplayed = true;
+                
+                //reset numbers and set operator
+                operator = "+";
+                num1 = parseFloat(display.textContent);
+                num2 = undefined;
+                
 
             } else{
                 num1 = parseFloat(display.textContent);
