@@ -24,6 +24,15 @@ buttons.addEventListener("click", (e) => {
     switch(target.id){
 
         case "one":
+            if (answerDisplayed){
+                display.textContent = "";
+                answerDisplayed = false;
+            }
+            
+            display.textContent += "1";
+
+            break;
+            
 
         case "two":
             
@@ -63,8 +72,6 @@ buttons.addEventListener("click", (e) => {
         case "plus":
             //Clear the screen, save the number and the operator
             
-            operator = "+";
-
             if (num1){ //If we have num1, num2 is the most recent number and we can operate
                 num2 = parseInt(display.textContent);
                 display.textContent = "";
@@ -72,16 +79,39 @@ buttons.addEventListener("click", (e) => {
                 answerDisplayed = true;
 
                 //reset numbers???
+                operator = "+"
                 num1 = parseInt(display.textContent);
                 num2 = undefined;
             } else{
                 num1 = parseInt(display.textContent);
                 display.textContent = "";
+                operator = "+"
             }
 
             break;
 
         case "minus":
+
+            //Clear the screen, save the number and the operator
+            
+            if (num1){ //If we have num1, num2 is the most recent number and we can operate
+                num2 = parseInt(display.textContent);
+                display.textContent = "";
+                display.textContent = operate(num1, num2, operator);
+                answerDisplayed = true;
+
+                //reset numbers???
+                operator = "-"
+                num1 = parseInt(display.textContent);
+                num2 = undefined;
+            } else{
+                num1 = parseInt(display.textContent);
+                display.textContent = "";
+                operator = "-"
+
+            }
+
+            break;
 
 
         case "equals":
