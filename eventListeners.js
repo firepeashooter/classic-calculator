@@ -74,14 +74,17 @@ buttons.addEventListener("click", (e) => {
             
             if (num1){ //If we have num1, num2 is the most recent number and we can operate
                 num2 = parseInt(display.textContent);
-                display.textContent = "";
-                display.textContent = operate(num1, num2, operator);
-                answerDisplayed = true;
+                if (num2){
+                    display.textContent = "";
+                    display.textContent = operate(num1, num2, operator);
+                    answerDisplayed = true;
+                    
+                    //reset numbers and set operator
+                    operator = "+"
+                    num1 = parseInt(display.textContent);
+                    num2 = undefined;
+                }
 
-                //reset numbers???
-                operator = "+"
-                num1 = parseInt(display.textContent);
-                num2 = undefined;
             } else{
                 num1 = parseInt(display.textContent);
                 display.textContent = "";
@@ -100,7 +103,6 @@ buttons.addEventListener("click", (e) => {
                 display.textContent = operate(num1, num2, operator);
                 answerDisplayed = true;
 
-                //reset numbers???
                 operator = "-"
                 num1 = parseInt(display.textContent);
                 num2 = undefined;
