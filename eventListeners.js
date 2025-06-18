@@ -29,7 +29,11 @@ buttons.addEventListener("click", (e) => {
                 answerDisplayed = false;
             }
 
-            display.textContent += "1";
+            if (display.textContent.length <= 20){
+
+                display.textContent += "1";
+            }
+
 
             break;
             
@@ -40,7 +44,10 @@ buttons.addEventListener("click", (e) => {
                 answerDisplayed = false;
             }
             
-            display.textContent += "2";
+            if (display.textContent.length <= 20){
+
+                display.textContent += "2";
+            }
 
             break;
             
@@ -52,7 +59,10 @@ buttons.addEventListener("click", (e) => {
                 answerDisplayed = false;
             }
             
-            display.textContent += "3";
+            if (display.textContent.length <= 20){
+
+                display.textContent += "3";
+            }
             
             break;
 
@@ -62,7 +72,10 @@ buttons.addEventListener("click", (e) => {
                 answerDisplayed = false;
             }
                       
-            display.textContent += "4";
+            if (display.textContent.length <= 20){
+
+                display.textContent += "4";
+            }
 
             break;
            
@@ -73,7 +86,10 @@ buttons.addEventListener("click", (e) => {
                 answerDisplayed = false;
             }
                       
-            display.textContent += "5";
+            if (display.textContent.length <= 20){
+
+                display.textContent += "5";
+            }
 
             break;
             
@@ -84,7 +100,11 @@ buttons.addEventListener("click", (e) => {
                 answerDisplayed = false;
             }
                       
-            display.textContent += "6";
+            if (display.textContent.length <= 20){
+
+                display.textContent += "6";
+            }
+
             break;
             
 
@@ -94,7 +114,10 @@ buttons.addEventListener("click", (e) => {
                 answerDisplayed = false;
             }
                       
-            display.textContent += "7";
+            if (display.textContent.length <= 20){
+
+                display.textContent += "7";
+            }
 
             break;
             
@@ -105,7 +128,10 @@ buttons.addEventListener("click", (e) => {
                 answerDisplayed = false;
             }
                       
-            display.textContent += "8";
+            if (display.textContent.length <= 20){
+
+                display.textContent += "8";
+            }
 
             break;
             
@@ -116,7 +142,10 @@ buttons.addEventListener("click", (e) => {
                 answerDisplayed = false;
             }
                       
-            display.textContent += "9";
+            if (display.textContent.length <= 20){
+
+                display.textContent += "9";
+            }
 
             break;
             
@@ -127,7 +156,10 @@ buttons.addEventListener("click", (e) => {
                 answerDisplayed = false;
             }
                       
-            display.textContent += "0";
+            if (display.textContent.length <= 20){
+
+                display.textContent += "0";
+            }
 
             break;
             
